@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
+    @vite('resources/js/app.js')
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Welcome to the Home Page</h1>
         <p class="text-center">This is a simple home page using Bootstrap for styling.</p>
+        <a href="{{ route('testpage') }}">Go to test page!</a>
     </div>
 </body>
 </html>

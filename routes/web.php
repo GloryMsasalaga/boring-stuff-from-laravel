@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/contact', function() {
-    return view('contact');
+// Route::get('/contact', function() {
+//     return view('contact');
+// });
+
+Route::get('/portfolio/{firstname}/{lastname}', function ($firstname, $lastname) {
+    return $firstname . " " . $lastname;
 });
+
+//named routes
+Route::get('/test', function() {
+    return "This is a test page!";
+})->name('testpage');

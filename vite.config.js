@@ -8,4 +8,14 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: 'localhost',
+        port: 5173,
+        strictPort: false,
+        hmr: {
+            host: 'localhost',
+            protocol: 'ws',
+            clientPort: 5173,
+        },
+    },
 });
